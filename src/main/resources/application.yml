@@ -1,0 +1,108 @@
+spring:
+  application:
+    name: wk-ai
+  mvc:
+    async:
+      request-timeout: 120s  # SSE 流式走 MVC async，默认超时会掐断长回答
+
+  ai:
+    # 多模型 starter 共存时必须显式指定默认实现，避免 ChatModel/EmbeddingModel Bean 歧义
+    model:
+      chat: openai          # openai | deepseek | google-genai
+      embedding: transformers  # transformers=本地 ONNX，无需外部 embedding 服务
+    openai:
+      # OpenAI 兼容协议：换接其他网关只需改 base-url
+      # 注意：Spring AI 2.0 用官方 OpenAI SDK，请求路径 = base-url + /chat/completions，
+      # 不再像 1.x 那样自动补 /v1 —— New API 类网关必须带 /v1 前缀，否则网关返回
+      # HTML 页面导致 JSON 解析失败（OpenAIInvalidDataException）
+      base-url: ${OPENAI_BASE_URL:http://ai-hub.nn.com/v1}
+      # 真实密钥只通过环境变量注入，不要写进本文件
+      api-key: ${OPENAI_API_KEY:sk-placeholder}
+      chat:
+        options:
+          model: ${OPENAI_MODEL:glm-5.3-flash}
+    deepseek:
+      api-key: ${DEEPSEEK_API_KEY:sk-placeholder}
+      chat:
+        options:
+          model: ${DEEPSEEK_MODEL:deepseek-chat}
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY:placeholder}
+        chat:
+          options:
+            model: ${GEMINI_MODEL:gemini-2.5-flash}
+    # 中文 embedding 模型 bge-small-zh-v1.5（384 维）：本地资源，离线可用，无首次下载等待；
+    # 模型文件在 src/main/resources/models/bge-small-zh-v1.5/（打包进 jar，jar 体积 +95MB）；
+    # 如需换模型或走远程下载，用环境变量 EMBEDDING_MODEL_URI / EMBEDDING_TOKENIZER_URI 覆盖
+    # 注意：换 embedding 模型必须同步改向量库维度并全量重建向量
+    transformer:
+      embedding:
+        tokenizer:
+          uri: ${EMBEDDING_TOKENIZER_URI:classpath:/models/bge-small-zh-v1.5/tokenizer.json}
+        model:
+          uri: ${EMBEDDING_MODEL_URI:classpath:/models/bge-small-zh-v1.5/model.onnx}
+    # 向量库当前为内存版 SimpleVectorStore（VectorStoreConfig 手动装配）；
+    # pgvector 切换方案已验证（双数据源 + dimensions 384 + HNSW），待 PG 环境就绪后按
+    # 知识库 2026-11-03 节的记录切回
+
+  # ERP MySQL（Tool Calling 数据源）
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/wk_ai?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:}
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics   # /actuator/metrics/llm.tokens.total 可查 token 用量
+
+rag:
+  ingest:
+    enabled: true      # 启动时扫描 docs-dir 全量入库（内存向量库重启即丢，每次启动重建）
+    docs-dir: ./docs   # 文档目录，递归扫描，支持 pdf/word/ppt/html/txt/md
+    chunk-size: 200    # 子块 token 上限（向量检索单元），须小于 embedding 模型输入上限
+    parent-chunk-size: 800  # 父块 token 上限（LLM 上下文单元）；0 或 ≤chunk-size 退化为平铺切块
+  chat:
+    top-k: 5               # 检索片段数
+    similarity-threshold: 0.4  # 相似度阈值：相关查询通常 0.4~0.7，无关 <0.3；准确率优先调 0.45~0.5
+    snippet-max-length: 200    # 引用片段截断长度
+    max-question-length: 512   # 问题最大长度
+    query-rewrite:
+      enabled: true        # 多轮查询改写（指代消解），有 history 才触发；每次问答多一次 LLM 调用
+      max-history-turns: 5 # 改写携带的最大历史轮数
+    multi-query:
+      enabled: true        # 多查询检索：LLM 扩展 N 个变体分别检索后 RRF 融合，提召回；
+                           # 每次问答多一次 LLM 调用 + N 次向量检索
+      n: 3                 # 变体数量
+    max-parent-blocks: 3   # 单次问答注入 prompt 的父块数上限（Parent-Child）
+    parent-max-chars: 4000 # 单个父块注入 prompt 的字符兜底截断
+    intent-router:
+      enabled: true        # 意图路由（KNOWLEDGE|DATA）；false 时全部走知识库
+    memory:
+      enabled: true        # 服务端会话记忆（conversationId 启用，优先于 history 字段）
+      max-messages: 10     # 滑动窗口消息条数，10 = 最近 5 轮（token 成本与注意力稀释的平衡点）
+      ttl-minutes: 30      # 会话过期时间（惰性清理）
+      in-generation: false # 生成阶段经 MessageChatMemoryAdvisor 注入结构化历史（默认关=严格 grounded）
+
+erp:
+  tool:
+    enabled: true          # ERP 工具总开关；false 时 DATA 意图也回退知识库
+    max-rows: 20           # 工具查询强制行数上限
+    timeout-seconds: 5     # 单次工具执行超时
+
+logging:
+  level:
+    # 项目自身：能看到查询改写前后对比、检索命中数、入库逐文件日志
+    com.wk.ai: debug
+    # Spring AI 框架：能看到 ChatClient 调用、提示词组装等框架层日志
+    org.springframework.ai: debug
+    # 网关请求异常排查：OpenAI SDK 交互细节（很吵，仅在排查 LLM 网关问题时打开）
+    # org.openai: debug
+  pattern:
+    # 日志携带请求 traceId（TraceIdFilter 写入 MDC，一次问答的多次 LLM 调用由此串联）
+    level: "%5p [${spring.application.name:-},%X{traceId:-}]"
