@@ -15,7 +15,7 @@ spring:
       # 注意：Spring AI 2.0 用官方 OpenAI SDK，请求路径 = base-url + /chat/completions，
       # 不再像 1.x 那样自动补 /v1 —— New API 类网关必须带 /v1 前缀，否则网关返回
       # HTML 页面导致 JSON 解析失败（OpenAIInvalidDataException）
-      base-url: ${OPENAI_BASE_URL:http://ai-hub.nn.com/v1}
+      base-url: ${OPENAI_BASE_URL:http://xxx.ai.com/v1}
       # 真实密钥只通过环境变量注入，不要写进本文件
       api-key: ${OPENAI_API_KEY:sk-placeholder}
       chat:
