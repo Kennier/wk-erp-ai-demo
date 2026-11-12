@@ -1,0 +1,71 @@
+### RAG 问答（单轮）——点击请求上方的 ▶ 运行
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "question": "文档是怎么切分的？"
+}
+
+### RAG 问答（多轮，带历史触发查询改写）
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "question": "它支持自定义标点吗？",
+  "history": [
+    {
+      "question": "文档是怎么切分的？",
+      "answer": "使用 TokenTextSplitter 按 token 计数切分，本项目 chunkSize 为 200。"
+    }
+  ]
+}
+
+### RAG 问答（自定义 topK 和相似度阈值）
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "question": "什么是 RAG？",
+  "topK": 3,
+  "threshold": 0.3
+}
+
+### RAG 问答（部门过滤：检索范围 = it 部门文档 + shared 共享库）
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "question": "VPN 怎么配置？",
+  "department": "it"
+}
+
+### ERP 数据查询（DATA 链路：意图路由 → Tool Calling）
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "question": "订单 SO20240001 到哪了？"
+}
+
+### ERP 数据查询（库存）
+POST http://localhost:8080/api/chat
+Content-Type: application/json
+
+{
+  "question": "SKU A100 还有货吗？"
+}
+
+### RAG 问答流式（SSE：delta 帧 + end 帧，IDEA HTTP Client 可视化展示）
+POST http://localhost:8080/api/chat/stream
+Content-Type: application/json
+Accept: text/event-stream
+
+{
+  "question": "文档是怎么切分的？"
+}
+
+### 手动触发知识库同步（docs/ 文件变更后调用）
+POST http://localhost:8080/admin/rag/reingest
+
+### 查看知识库台账状态
+GET http://localhost:8080/admin/rag/status

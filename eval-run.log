@@ -1,0 +1,969 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------------< com.wk:wk-ai >----------------------------
+[INFO] Building wk-ai 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/apache/maven/plugins/maven-failsafe-plugin/3.5.6/maven-failsafe-plugin-3.5.6.pom
+Progress (1): 7.6/11 kBProgress (1): 11/11 kB Progress (1): 11 kB                      Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/apache/maven/plugins/maven-failsafe-plugin/3.5.6/maven-failsafe-plugin-3.5.6.pom (11 kB at 31 kB/s)
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/apache/maven/plugins/maven-failsafe-plugin/3.5.6/maven-failsafe-plugin-3.5.6.jar
+Progress (1): 4.2/58 kBProgress (1): 23/58 kB Progress (1): 28/58 kBProgress (1): 58 kB                      Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/apache/maven/plugins/maven-failsafe-plugin/3.5.6/maven-failsafe-plugin-3.5.6.jar (58 kB at 265 kB/s)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ wk-ai ---
+[INFO] Copying 4 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ wk-ai ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ wk-ai ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ wk-ai ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ wk-ai ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.wk.ai.config.ChineseEmbeddingModelTest
+17:38:10.257 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wk.ai.config.ChineseEmbeddingModelTest]: ChineseEmbeddingModelTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:38:10.402 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wk.ai.WkAiApplication for test class com.wk.ai.config.ChineseEmbeddingModelTest
+17:38:10.498 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wk.ai.config.ChineseEmbeddingModelTest]: ChineseEmbeddingModelTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:38:10.501 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wk.ai.WkAiApplication for test class com.wk.ai.config.ChineseEmbeddingModelTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-11-03T17:38:10.905+08:00  INFO 33052 --- [wk-ai] [           main] c.w.ai.config.ChineseEmbeddingModelTest  : Starting ChineseEmbeddingModelTest using Java 21.0.11 with PID 33052 (started by wangk in D:\software\ggg\wk-ai-demo)
+2026-11-03T17:38:10.906+08:00 DEBUG 33052 --- [wk-ai] [           main] c.w.ai.config.ChineseEmbeddingModelTest  : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-11-03T17:38:10.907+08:00  INFO 33052 --- [wk-ai] [           main] c.w.ai.config.ChineseEmbeddingModelTest  : No active profile set, falling back to 1 default profile: "default"
+2026-11-03T17:38:14.764+08:00  INFO 33052 --- [wk-ai] [           main] o.s.a.transformers.ResourceCacheService  : Caching the URL [https://raw.githubusercontent.com/spring-projects/spring-ai/main/models/spring-ai-transformers/src/main/resources/onnx/all-MiniLM-L6-v2/tokenizer.json] resource to: C:\Users\wangk\AppData\Local\Temp\spring-ai-model-cache16248584137985581312\4d42ba07-cb22-352f-bb44-beccc8c8c0b7\tokenizer.json
+2026-11-03T17:38:18.837+08:00  INFO 33052 --- [wk-ai] [           main] ai.djl.util.Platform                     : Found matching platform from: jar:file:/D:/repo/ai/djl/huggingface/tokenizers/0.32.0/tokenizers-0.32.0.jar!/native/lib/tokenizers.properties
+2026-11-03T17:38:39.223+08:00  INFO 33052 --- [wk-ai] [           main] o.s.a.transformers.ResourceCacheService  : Caching the URL [https://media.githubusercontent.com/media/spring-projects/spring-ai/refs/heads/main/models/spring-ai-transformers/src/main/resources/onnx/all-MiniLM-L6-v2/model.onnx] resource to: C:\Users\wangk\AppData\Local\Temp\spring-ai-model-cache16248584137985581312\d5769837-23ea-3f7c-a3e3-ded3412df4f4\model.onnx
+2026-11-03T17:38:39.448+08:00  INFO 33052 --- [wk-ai] [           main] o.s.a.t.TransformersEmbeddingModel       : Model input names: input_ids, attention_mask, token_type_ids
+2026-11-03T17:38:39.449+08:00  INFO 33052 --- [wk-ai] [           main] o.s.a.t.TransformersEmbeddingModel       : Model output names: last_hidden_state
+2026-11-03T17:38:39.636+08:00 DEBUG 33052 --- [wk-ai] [           main] o.s.a.m.t.a.ToolCallingAutoConfiguration : Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.16 
+2026-11-03T17:38:41.306+08:00  INFO 33052 --- [wk-ai] [           main] m.e.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.web.context.support.GenericWebApplicationContext@7eae3764
+2026-11-03T17:38:41.851+08:00  INFO 33052 --- [wk-ai] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-03T17:38:41.940+08:00  INFO 33052 --- [wk-ai] [           main] c.w.ai.config.ChineseEmbeddingModelTest  : Started ChineseEmbeddingModelTest in 31.374 seconds (process running for 32.748)
+2026-11-03T17:38:42.026+08:00  INFO 33052 --- [wk-ai] [           main] c.wk.ai.runner.DocumentIngestionRunner   : 启动入库已关闭（rag.ingest.enabled=false），可调用 POST /admin/rag/reingest 手动触发
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (D:\repo\net\bytebuddy\byte-buddy-agent\1.18.11\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.68 s -- in com.wk.ai.config.ChineseEmbeddingModelTest
+[INFO] Running com.wk.ai.service.ConversationMemoryServiceTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in com.wk.ai.service.ConversationMemoryServiceTest
+[INFO] Running com.wk.ai.service.ErpQueryServiceTest
+2026-11-03T17:38:43.486+08:00 ERROR 33052 --- [wk-ai] [           main] com.wk.ai.service.ErpQueryService        : ERP 查询失败
+
+org.springframework.dao.QueryTimeoutException: timeout
+	at com.wk.ai.service.ErpQueryService.lambda$findOrder$0(ErpQueryService.java:77) ~[classes/:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768) ~[na:na]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1760) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[na:na]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[na:na]
+
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.941 s -- in com.wk.ai.service.ErpQueryServiceTest
+[INFO] Running com.wk.ai.service.IngestionServiceTest
+2026-11-03T17:38:45.034+08:00  INFO 33052 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 3 chunks.
+2026-11-03T17:38:45.038+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 3 块
+2026-11-03T17:38:45.149+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:45.360+08:00  INFO 33052 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 3 chunks.
+2026-11-03T17:38:45.362+08:00  INFO 33052 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:38:45.368+08:00  INFO 33052 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:38:45.369+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 9 块
+2026-11-03T17:38:45.483+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:45.560+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:45.676+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:45.678+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 0, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:45.777+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:45.946+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 2 个文件, 更新 2, 清理 0, 失败 0, 共 2 块
+2026-11-03T17:38:46.056+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:46.126+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:46.202+08:00 ERROR 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 文档入库失败，保留旧版本可检索: a.md
+
+java.lang.IllegalStateException: simulated add failure
+	at com.wk.ai.service.IngestionServiceTest.lambda$failedWriteKeepsOldChunksRetrievable$2(IngestionServiceTest.java:129) ~[test-classes/:na]
+	at org.mockito.internal.stubbing.StubbedInvocationMatcher.answer(StubbedInvocationMatcher.java:42) ~[mockito-core-5.23.0.jar:na]
+	at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:103) ~[mockito-core-5.23.0.jar:na]
+	at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29) ~[mockito-core-5.23.0.jar:na]
+	at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:34) ~[mockito-core-5.23.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.access.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:84) ~[mockito-core-5.23.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.access.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:58) ~[mockito-core-5.23.0.jar:na]
+	at org.mockito.internal.creation.bytebuddy.access.MockMethodInterceptor$DispatcherDefaultingToRealMethod.interceptAbstract(MockMethodInterceptor.java:163) ~[mockito-core-5.23.0.jar:na]
+	at org.springframework.ai.vectorstore.VectorStore$MockitoMock$RPwK2Vgn.add(Unknown Source) ~[spring-ai-vector-store-2.0.0.jar:2.0.0]
+	at com.wk.ai.service.IngestionService.ingestFile(IngestionService.java:186) ~[classes/:na]
+	at com.wk.ai.service.IngestionService.rebuildAll(IngestionService.java:124) ~[classes/:na]
+	at com.wk.ai.service.IngestionServiceTest.failedWriteKeepsOldChunksRetrievable(IngestionServiceTest.java:134) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-11-03T17:38:46.205+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 0, 清理 0, 失败 1, 共 0 块
+2026-11-03T17:38:46.317+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 1 个文件, 更新 1, 清理 0, 失败 0, 共 1 块
+2026-11-03T17:38:46.319+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 0 个文件, 更新 0, 清理 1, 失败 0, 共 0 块
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.601 s -- in com.wk.ai.service.IngestionServiceTest
+[INFO] Running com.wk.ai.service.IntentRouterTest
+2026-11-03T17:38:46.479+08:00  WARN 33052 --- [wk-ai] [           main] com.wk.ai.service.IntentRouter           : 意图路由失败，回退 KNOWLEDGE: 网关超时
+2026-11-03T17:38:46.486+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.IntentRouter           : 意图分类非法值 [UNKNOWN]，回退 KNOWLEDGE
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.167 s -- in com.wk.ai.service.IntentRouterTest
+[INFO] Running com.wk.ai.service.RagChatServiceTest
+2026-11-03T17:38:46.713+08:00  WARN 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展失败，回退原始问题单路检索: 网关超时
+2026-11-03T17:38:46.728+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [文档怎么切分？], 引用 1 个
+2026-11-03T17:38:46.743+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [切分方法？], 引用 2 个
+2026-11-03T17:38:46.750+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [问题], 引用 1 个
+2026-11-03T17:38:46.974+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询改写: [它怎么切分？] -> [TokenTextSplitter 如何切分文档？]
+2026-11-03T17:38:46.982+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [问题], 引用 1 个
+2026-11-03T17:38:47.537+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 流式问答完成: 检索问题 [文档怎么切分？], 引用 1 个
+2026-11-03T17:38:47.555+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询改写: [它怎么切分？] -> [改写后的问题]
+2026-11-03T17:38:47.557+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [改写后的问题], 引用 1 个
+TURN>>> Q=用什么组件切分文档？ A=TokenTextSplitter
+TURN>>> Q=它怎么切分？ A=文档切块使用 TokenTextSplitter，按 token 计数切分 [1]。
+2026-11-03T17:38:47.578+08:00 ERROR 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 流式生成中断: 检索问题 [问题]
+
+java.lang.RuntimeException: 网关断开
+	at com.wk.ai.service.RagChatServiceTest.streamGenerationErrorEmitsErrorFrame(RagChatServiceTest.java:306) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-11-03T17:38:47.590+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [如何切分文档？] -> [如何切分文档？, 如何切分文档, 文档切块方法]
+2026-11-03T17:38:47.592+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 3 路查询, 命中去重后 3 块, 取 top 3
+2026-11-03T17:38:47.593+08:00 DEBUG 33052 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [如何切分文档？], 引用 3 个
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.108 s -- in com.wk.ai.service.RagChatServiceTest
+[INFO] Running com.wk.ai.tools.ErpToolsTest
+2026-11-03T17:38:47.646+08:00 ERROR 33052 --- [wk-ai] [           main] com.wk.ai.tools.ErpTools                 : ERP 工具调用异常: tool=queryOrder, args={orderNo=SO20240001}
+
+java.lang.IllegalStateException: db connection lost
+	at com.wk.ai.service.ErpQueryService.findOrder(ErpQueryService.java:73) ~[classes/:na]
+	at com.wk.ai.tools.ErpTools.lambda$queryOrder$0(ErpTools.java:42) ~[classes/:na]
+	at com.wk.ai.tools.ErpTools.execute(ErpTools.java:71) ~[classes/:na]
+	at com.wk.ai.tools.ErpTools.queryOrder(ErpTools.java:41) ~[classes/:na]
+	at com.wk.ai.tools.ErpToolsTest.systemErrorIsMaskedFromLlm(ErpToolsTest.java:54) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502) ~[junit-platform-commons-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70) ~[junit-jupiter-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58) ~[junit-platform-engine-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58) ~[junit-platform-launcher-6.0.3.jar:6.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125) ~[surefire-api-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136) ~[surefire-junit-platform-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.6.jar:3.5.6]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.6.jar:3.5.6]
+
+2026-11-03T17:38:47.651+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.tools.ErpTools                 : ERP 工具调用: tool=queryStock, args={sku=A100}, 耗时=1ms
+2026-11-03T17:38:47.659+08:00  INFO 33052 --- [wk-ai] [           main] com.wk.ai.tools.ErpTools                 : ERP 工具调用: tool=queryOrder, args={orderNo=SO99999999}, 业务失败: 未找到订单 SO99999999，请确认订单号是否正确
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s -- in com.wk.ai.tools.ErpToolsTest
+[INFO] Running com.wk.ai.WkAiApplicationTests
+2026-11-03T17:38:47.665+08:00  INFO 33052 --- [wk-ai] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.wk.ai.WkAiApplicationTests]: WkAiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-03T17:38:47.680+08:00  INFO 33052 --- [wk-ai] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.wk.ai.WkAiApplication for test class com.wk.ai.WkAiApplicationTests
+2026-11-03T17:38:47.683+08:00  INFO 33052 --- [wk-ai] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.wk.ai.WkAiApplicationTests]: WkAiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-03T17:38:47.684+08:00  INFO 33052 --- [wk-ai] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.wk.ai.WkAiApplication for test class com.wk.ai.WkAiApplicationTests
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in com.wk.ai.WkAiApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 53, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ wk-ai ---
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/apache/maven/maven-archiver/3.6.6/maven-archiver-3.6.6.jar
+Progress (1): 7.6/28 kBProgress (1): 11/28 kB Progress (1): 28 kB                      Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/apache/maven/maven-archiver/3.6.6/maven-archiver-3.6.6.jar (28 kB at 69 kB/s)
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/codehaus/plexus/plexus-archiver/4.12.0/plexus-archiver-4.12.0.jar
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/com/github/luben/zstd-jni/1.5.7-9/zstd-jni-1.5.7-9.jar
+Progress (1): 6.6/227 kBProgress (1): 20/227 kB Progress (1): 26/227 kBProgress (1): 31/227 kBProgress (1): 33/227 kBProgress (1): 43/227 kBProgress (1): 50/227 kBProgress (1): 51/227 kBProgress (1): 58/227 kBProgress (1): 63/227 kBProgress (1): 82/227 kBProgress (1): 115/227 kBProgress (1): 137/227 kBProgress (1): 143/227 kBProgress (1): 148/227 kBProgress (1): 149/227 kBProgress (1): 169/227 kBProgress (1): 175/227 kBProgress (1): 193/227 kBProgress (1): 195/227 kBProgress (1): 200/227 kBProgress (1): 205/227 kBProgress (1): 213/227 kBProgress (1): 226/227 kBProgress (1): 227 kB    Progress (2): 227 kB | 0/7.6 MBProgress (2): 227 kB | 0/7.6 MBProgress (2): 227 kB | 0/7.6 MBProgress (2): 227 kB | 0/7.6 MBProgress (2): 227 kB | 0.1/7.6 MBProgress (2): 227 kB | 0.1/7.6 MB                                 Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/codehaus/plexus/plexus-archiver/4.12.0/plexus-archiver-4.12.0.jar (227 kB at 542 kB/s)
+Progress (1): 0.1/7.6 MBProgress (1): 0.1/7.6 MBProgress (1): 0.2/7.6 MBProgress (1): 0.2/7.6 MBProgress (1): 0.2/7.6 MBProgress (1): 0.2/7.6 MBProgress (1): 0.2/7.6 MBProgress (1): 0.3/7.6 MBProgress (1): 0.3/7.6 MBProgress (1): 0.3/7.6 MBProgress (1): 0.4/7.6 MBProgress (1): 0.4/7.6 MBProgress (1): 0.4/7.6 MBProgress (1): 0.4/7.6 MBProgress (1): 0.4/7.6 MBProgress (1): 0.5/7.6 MBProgress (1): 0.5/7.6 MBProgress (1): 0.5/7.6 MBProgress (1): 0.5/7.6 MBProgress (1): 0.5/7.6 MBProgress (1): 0.5/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.6/7.6 MBProgress (1): 0.7/7.6 MBProgress (1): 0.7/7.6 MBProgress (1): 0.7/7.6 MBProgress (1): 0.7/7.6 MBProgress (1): 0.8/7.6 MBProgress (1): 0.8/7.6 MBProgress (1): 0.8/7.6 MBProgress (1): 0.8/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 0.9/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.0/7.6 MBProgress (1): 1.1/7.6 MBProgress (1): 1.1/7.6 MBProgress (1): 1.1/7.6 MBProgress (1): 1.1/7.6 MBProgress (1): 1.1/7.6 MBProgress (1): 1.2/7.6 MBProgress (1): 1.2/7.6 MBProgress (1): 1.2/7.6 MBProgress (1): 1.2/7.6 MBProgress (1): 1.2/7.6 MBProgress (1): 1.2/7.6 MBProgress (1): 1.2/7.6 MBProgress (1): 1.3/7.6 MBProgress (1): 1.3/7.6 MBProgress (1): 1.3/7.6 MBProgress (1): 1.3/7.6 MBProgress (1): 1.4/7.6 MBProgress (1): 1.4/7.6 MBProgress (1): 1.4/7.6 MBProgress (1): 1.4/7.6 MBProgress (1): 1.4/7.6 MBProgress (1): 1.4/7.6 MBProgress (1): 1.4/7.6 MBProgress (1): 1.5/7.6 MBProgress (1): 1.5/7.6 MBProgress (1): 1.5/7.6 MBProgress (1): 1.6/7.6 MBProgress (1): 1.6/7.6 MBProgress (1): 1.6/7.6 MBProgress (1): 1.7/7.6 MBProgress (1): 1.7/7.6 MBProgress (1): 1.7/7.6 MBProgress (1): 1.8/7.6 MBProgress (1): 1.8/7.6 MBProgress (1): 1.8/7.6 MBProgress (1): 1.9/7.6 MBProgress (1): 1.9/7.6 MBProgress (1): 1.9/7.6 MBProgress (1): 1.9/7.6 MBProgress (1): 1.9/7.6 MBProgress (1): 1.9/7.6 MBProgress (1): 2.0/7.6 MBProgress (1): 2.0/7.6 MBProgress (1): 2.0/7.6 MBProgress (1): 2.0/7.6 MBProgress (1): 2.1/7.6 MBProgress (1): 2.1/7.6 MBProgress (1): 2.1/7.6 MBProgress (1): 2.2/7.6 MBProgress (1): 2.2/7.6 MBProgress (1): 2.2/7.6 MBProgress (1): 2.2/7.6 MBProgress (1): 2.2/7.6 MBProgress (1): 2.2/7.6 MBProgress (1): 2.2/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.3/7.6 MBProgress (1): 2.4/7.6 MBProgress (1): 2.4/7.6 MBProgress (1): 2.4/7.6 MBProgress (1): 2.4/7.6 MBProgress (1): 2.4/7.6 MBProgress (1): 2.4/7.6 MBProgress (1): 2.4/7.6 MBProgress (1): 2.5/7.6 MBProgress (1): 2.5/7.6 MBProgress (1): 2.5/7.6 MBProgress (1): 2.5/7.6 MBProgress (1): 2.6/7.6 MBProgress (1): 2.6/7.6 MBProgress (1): 2.6/7.6 MBProgress (1): 2.6/7.6 MBProgress (1): 2.7/7.6 MBProgress (1): 2.7/7.6 MBProgress (1): 2.7/7.6 MBProgress (1): 2.7/7.6 MBProgress (1): 2.7/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.8/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 2.9/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.0/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.1/7.6 MBProgress (1): 3.2/7.6 MBProgress (1): 3.2/7.6 MBProgress (1): 3.2/7.6 MBProgress (1): 3.3/7.6 MBProgress (1): 3.3/7.6 MBProgress (1): 3.3/7.6 MBProgress (1): 3.3/7.6 MBProgress (1): 3.4/7.6 MBProgress (1): 3.4/7.6 MBProgress (1): 3.4/7.6 MBProgress (1): 3.4/7.6 MBProgress (1): 3.4/7.6 MBProgress (1): 3.5/7.6 MBProgress (1): 3.5/7.6 MBProgress (1): 3.5/7.6 MBProgress (1): 3.5/7.6 MBProgress (1): 3.6/7.6 MBProgress (1): 3.6/7.6 MBProgress (1): 3.6/7.6 MBProgress (1): 3.6/7.6 MBProgress (1): 3.6/7.6 MBProgress (1): 3.7/7.6 MBProgress (1): 3.7/7.6 MBProgress (1): 3.7/7.6 MBProgress (1): 3.8/7.6 MBProgress (1): 3.8/7.6 MBProgress (1): 3.8/7.6 MBProgress (1): 3.8/7.6 MBProgress (1): 3.8/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 3.9/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.0/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.1/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.2/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.3/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.4/7.6 MBProgress (1): 4.5/7.6 MBProgress (1): 4.5/7.6 MBProgress (1): 4.5/7.6 MBProgress (1): 4.5/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.6/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.7/7.6 MBProgress (1): 4.8/7.6 MBProgress (1): 4.8/7.6 MBProgress (1): 4.8/7.6 MBProgress (1): 4.9/7.6 MBProgress (1): 4.9/7.6 MBProgress (1): 4.9/7.6 MBProgress (1): 5.0/7.6 MBProgress (1): 5.0/7.6 MBProgress (1): 5.0/7.6 MBProgress (1): 5.0/7.6 MBProgress (1): 5.0/7.6 MBProgress (1): 5.1/7.6 MBProgress (1): 5.1/7.6 MBProgress (1): 5.1/7.6 MBProgress (1): 5.2/7.6 MBProgress (1): 5.2/7.6 MBProgress (1): 5.2/7.6 MBProgress (1): 5.2/7.6 MBProgress (1): 5.3/7.6 MBProgress (1): 5.3/7.6 MBProgress (1): 5.3/7.6 MBProgress (1): 5.3/7.6 MBProgress (1): 5.4/7.6 MBProgress (1): 5.4/7.6 MBProgress (1): 5.4/7.6 MBProgress (1): 5.5/7.6 MBProgress (1): 5.5/7.6 MBProgress (1): 5.5/7.6 MBProgress (1): 5.5/7.6 MBProgress (1): 5.6/7.6 MBProgress (1): 5.6/7.6 MBProgress (1): 5.6/7.6 MBProgress (1): 5.6/7.6 MBProgress (1): 5.6/7.6 MBProgress (1): 5.6/7.6 MBProgress (1): 5.6/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.7/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.8/7.6 MBProgress (1): 5.9/7.6 MBProgress (1): 5.9/7.6 MBProgress (1): 5.9/7.6 MBProgress (1): 5.9/7.6 MBProgress (1): 5.9/7.6 MBProgress (1): 5.9/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.0/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.1/7.6 MBProgress (1): 6.2/7.6 MBProgress (1): 6.2/7.6 MBProgress (1): 6.2/7.6 MBProgress (1): 6.2/7.6 MBProgress (1): 6.2/7.6 MBProgress (1): 6.2/7.6 MBProgress (1): 6.2/7.6 MBProgress (1): 6.3/7.6 MBProgress (1): 6.3/7.6 MBProgress (1): 6.3/7.6 MBProgress (1): 6.3/7.6 MBProgress (1): 6.3/7.6 MBProgress (1): 6.3/7.6 MBProgress (1): 6.3/7.6 MBProgress (1): 6.3/7.6 MBProgress (1): 6.4/7.6 MBProgress (1): 6.4/7.6 MBProgress (1): 6.4/7.6 MBProgress (1): 6.4/7.6 MBProgress (1): 6.4/7.6 MBProgress (1): 6.4/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.5/7.6 MBProgress (1): 6.6/7.6 MBProgress (1): 6.6/7.6 MBProgress (1): 6.6/7.6 MBProgress (1): 6.6/7.6 MBProgress (1): 6.6/7.6 MBProgress (1): 6.7/7.6 MBProgress (1): 6.7/7.6 MBProgress (1): 6.7/7.6 MBProgress (1): 6.7/7.6 MBProgress (1): 6.7/7.6 MBProgress (1): 6.7/7.6 MBProgress (1): 6.7/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.8/7.6 MBProgress (1): 6.9/7.6 MBProgress (1): 6.9/7.6 MBProgress (1): 6.9/7.6 MBProgress (1): 6.9/7.6 MBProgress (1): 6.9/7.6 MBProgress (1): 6.9/7.6 MBProgress (1): 6.9/7.6 MBProgress (1): 7.0/7.6 MBProgress (1): 7.0/7.6 MBProgress (1): 7.0/7.6 MBProgress (1): 7.0/7.6 MBProgress (1): 7.1/7.6 MBProgress (1): 7.1/7.6 MBProgress (1): 7.1/7.6 MBProgress (1): 7.1/7.6 MBProgress (1): 7.1/7.6 MBProgress (1): 7.2/7.6 MBProgress (1): 7.2/7.6 MBProgress (1): 7.2/7.6 MBProgress (1): 7.3/7.6 MBProgress (1): 7.3/7.6 MBProgress (1): 7.3/7.6 MBProgress (1): 7.3/7.6 MBProgress (1): 7.3/7.6 MBProgress (1): 7.3/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.4/7.6 MBProgress (1): 7.5/7.6 MBProgress (1): 7.5/7.6 MBProgress (1): 7.5/7.6 MBProgress (1): 7.5/7.6 MBProgress (1): 7.6/7.6 MBProgress (1): 7.6/7.6 MBProgress (1): 7.6 MB                        Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/com/github/luben/zstd-jni/1.5.7-9/zstd-jni-1.5.7-9.jar (7.6 MB at 4.1 MB/s)
+[INFO] Building jar: D:\software\ggg\wk-ai-demo\target\wk-ai-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ wk-ai ---
+[INFO] Artifact org.antlr:antlr4-runtime:jar:4.7.2 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [snapshots (http://172.31.4.4:9091/repository/maven-public/, default, snapshots), alimaven (http://172.31.4.4:9091/repository/maven-public/, default, releases)]
+[INFO] Artifact io.micrometer:micrometer-observation:jar:1.16.7 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [snapshots (http://172.31.4.4:9091/repository/maven-public/, default, snapshots), alimaven (http://172.31.4.4:9091/repository/maven-public/, default, releases)]
+[INFO] Artifact io.micrometer:micrometer-commons:jar:1.16.7 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [snapshots (http://172.31.4.4:9091/repository/maven-public/, default, snapshots), alimaven (http://172.31.4.4:9091/repository/maven-public/, default, releases)]
+[INFO] Artifact org.antlr:antlr4-runtime:jar:4.7.2 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [snapshots (http://172.31.4.4:9091/repository/maven-public/, default, snapshots), alimaven (http://172.31.4.4:9091/repository/maven-public/, default, releases)]
+[INFO] Artifact io.micrometer:micrometer-observation:jar:1.16.7 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [snapshots (http://172.31.4.4:9091/repository/maven-public/, default, snapshots), alimaven (http://172.31.4.4:9091/repository/maven-public/, default, releases)]
+[INFO] Artifact io.micrometer:micrometer-commons:jar:1.16.7 is present in the local repository, but cached from a remote repository ID that is unavailable in current build context, verifying that is downloadable from [snapshots (http://172.31.4.4:9091/repository/maven-public/, default, snapshots), alimaven (http://172.31.4.4:9091/repository/maven-public/, default, releases)]
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/springframework/boot/spring-boot-buildpack-platform/4.1.1/spring-boot-buildpack-platform-4.1.1.jar
+Progress (1): 7.6/333 kBProgress (1): 11/333 kB Progress (1): 14/333 kBProgress (1): 17/333 kBProgress (1): 20/333 kBProgress (1): 38/333 kBProgress (1): 45/333 kBProgress (1): 74/333 kBProgress (1): 83/333 kBProgress (1): 88/333 kBProgress (1): 95/333 kBProgress (1): 97/333 kBProgress (1): 109/333 kBProgress (1): 113/333 kBProgress (1): 117/333 kBProgress (1): 125/333 kBProgress (1): 128/333 kBProgress (1): 133/333 kBProgress (1): 134/333 kBProgress (1): 142/333 kBProgress (1): 146/333 kBProgress (1): 153/333 kBProgress (1): 158/333 kBProgress (1): 175/333 kBProgress (1): 207/333 kBProgress (1): 208/333 kBProgress (1): 241/333 kBProgress (1): 274/333 kBProgress (1): 290/333 kBProgress (1): 323/333 kBProgress (1): 333 kB                        Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/springframework/boot/spring-boot-buildpack-platform/4.1.1/spring-boot-buildpack-platform-4.1.1.jar (333 kB at 623 kB/s)
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/springframework/boot/spring-boot-loader-tools/4.1.1/spring-boot-loader-tools-4.1.1.jar
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/io/micrometer/micrometer-observation/1.16.7/micrometer-observation-1.16.7.jar
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/io/micrometer/micrometer-commons/1.16.7/micrometer-commons-1.16.7.jar
+Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/antlr/antlr4-runtime/4.7.2/antlr4-runtime-4.7.2.jar (0 B at 0 B/s)
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/apache/maven/plugins/maven-shade-plugin/3.6.0/maven-shade-plugin-3.6.0.jar
+Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/io/micrometer/micrometer-observation/1.16.7/micrometer-observation-1.16.7.jar (0 B at 0 B/s)
+Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/io/micrometer/micrometer-commons/1.16.7/micrometer-commons-1.16.7.jar (0 B at 0 B/s)
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/ow2/asm/asm-commons/9.7/asm-commons-9.7.jar
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/ow2/asm/asm-tree/9.7/asm-tree-9.7.jar
+Progress (1): 7.6/342 kBProgress (1): 11/342 kB Progress (1): 14/342 kBProgress (1): 35/342 kBProgress (1): 68/342 kBProgress (1): 82/342 kBProgress (2): 82/342 kB | 7.6/157 kBProgress (2): 82/342 kB | 40/157 kB Progress (2): 82/342 kB | 66/157 kBProgress (2): 82/342 kB | 98/157 kBProgress (2): 82/342 kB | 112/157 kBProgress (2): 82/342 kB | 114/157 kBProgress (2): 82/342 kB | 147/157 kBProgress (2): 82/342 kB | 157 kB    Progress (3): 82/342 kB | 157 kB | 7.6/73 kBProgress (3): 82/342 kB | 157 kB | 11/73 kB Progress (4): 82/342 kB | 157 kB | 11/73 kB | 7.6/52 kBProgress (4): 82/342 kB | 157 kB | 11/73 kB | 11/52 kB Progress (5): 82/342 kB | 157 kB | 11/73 kB | 11/52 kB | 7.6/150 kBProgress (5): 82/342 kB | 157 kB | 11/73 kB | 11/52 kB | 11/150 kB Progress (5): 90/342 kB | 157 kB | 11/73 kB | 11/52 kB | 11/150 kBProgress (5): 122/342 kB | 157 kB | 11/73 kB | 11/52 kB | 11/150 kBProgress (5): 122/342 kB | 157 kB | 35/73 kB | 11/52 kB | 11/150 kBProgress (5): 155/342 kB | 157 kB | 35/73 kB | 11/52 kB | 11/150 kBProgress (5): 155/342 kB | 157 kB | 35/73 kB | 11/52 kB | 29/150 kBProgress (5): 177/342 kB | 157 kB | 35/73 kB | 11/52 kB | 29/150 kBProgress (5): 177/342 kB | 157 kB | 35/73 kB | 35/52 kB | 29/150 kBProgress (5): 177/342 kB | 157 kB | 35/73 kB | 35/52 kB | 35/150 kBProgress (5): 177/342 kB | 157 kB | 36/73 kB | 35/52 kB | 35/150 kBProgress (5): 210/342 kB | 157 kB | 36/73 kB | 35/52 kB | 35/150 kBProgress (5): 226/342 kB | 157 kB | 36/73 kB | 35/52 kB | 35/150 kBProgress (5): 231/342 kB | 157 kB | 36/73 kB | 35/52 kB | 35/150 kBProgress (5): 231/342 kB | 157 kB | 66/73 kB | 35/52 kB | 35/150 kBProgress (5): 262/342 kB | 157 kB | 66/73 kB | 35/52 kB | 35/150 kB                                                                   Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/tomlj/tomlj/1.0.0/tomlj-1.0.0.jar (157 kB at 425 kB/s)
+Downloading from alimaven: http://172.31.4.4:9091/repository/maven-public/org/vafer/jdependency/2.10/jdependency-2.10.jar
+Progress (4): 262/342 kB | 73 kB | 35/52 kB | 35/150 kBProgress (4): 295/342 kB | 73 kB | 35/52 kB | 35/150 kBProgress (4): 295/342 kB | 73 kB | 39/52 kB | 35/150 kBProgress (4): 295/342 kB | 73 kB | 41/52 kB | 35/150 kBProgress (4): 308/342 kB | 73 kB | 41/52 kB | 35/150 kBProgress (4): 308/342 kB | 73 kB | 47/52 kB | 35/150 kBProgress (4): 308/342 kB | 73 kB | 52 kB | 35/150 kB   Progress (4): 308/342 kB | 73 kB | 52 kB | 43/150 kBProgress (4): 308/342 kB | 73 kB | 52 kB | 53/150 kBProgress (4): 308/342 kB | 73 kB | 52 kB | 62/150 kBProgress (4): 308/342 kB | 73 kB | 52 kB | 64/150 kBProgress (4): 308/342 kB | 73 kB | 52 kB | 68/150 kBProgress (4): 308/342 kB | 73 kB | 52 kB | 77/150 kBProgress (4): 308/342 kB | 73 kB | 52 kB | 83/150 kBProgress (4): 315/342 kB | 73 kB | 52 kB | 83/150 kBProgress (4): 317/342 kB | 73 kB | 52 kB | 83/150 kBProgress (4): 333/342 kB | 73 kB | 52 kB | 83/150 kBProgress (4): 342 kB | 73 kB | 52 kB | 83/150 kB    Progress (4): 342 kB | 73 kB | 52 kB | 100/150 kBProgress (4): 342 kB | 73 kB | 52 kB | 124/150 kBProgress (4): 342 kB | 73 kB | 52 kB | 150 kB                                                 Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/ow2/asm/asm-commons/9.7/asm-commons-9.7.jar (73 kB at 167 kB/s)
+Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/ow2/asm/asm-tree/9.7/asm-tree-9.7.jar (52 kB at 111 kB/s)
+Progress (3): 342 kB | 150 kB | 7.6/416 kBProgress (3): 342 kB | 150 kB | 22/416 kB Progress (3): 342 kB | 150 kB | 33/416 kBProgress (3): 342 kB | 150 kB | 35/416 kBProgress (3): 342 kB | 150 kB | 62/416 kBProgress (3): 342 kB | 150 kB | 67/416 kBProgress (3): 342 kB | 150 kB | 78/416 kBProgress (3): 342 kB | 150 kB | 90/416 kBProgress (3): 342 kB | 150 kB | 96/416 kBProgress (3): 342 kB | 150 kB | 104/416 kBProgress (3): 342 kB | 150 kB | 106/416 kBProgress (3): 342 kB | 150 kB | 138/416 kBProgress (3): 342 kB | 150 kB | 144/416 kB                                          Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/apache/maven/plugins/maven-shade-plugin/3.6.0/maven-shade-plugin-3.6.0.jar (150 kB at 284 kB/s)
+Progress (2): 342 kB | 151/416 kBProgress (2): 342 kB | 154/416 kBProgress (2): 342 kB | 157/416 kBProgress (2): 342 kB | 178/416 kBProgress (2): 342 kB | 180/416 kBProgress (2): 342 kB | 187/416 kBProgress (2): 342 kB | 208/416 kBProgress (2): 342 kB | 240/416 kBProgress (2): 342 kB | 242/416 kBProgress (2): 342 kB | 252/416 kBProgress (2): 342 kB | 285/416 kBProgress (2): 342 kB | 295/416 kBProgress (2): 342 kB | 328/416 kBProgress (2): 342 kB | 331/416 kBProgress (2): 342 kB | 332/416 kBProgress (2): 342 kB | 335/416 kBProgress (2): 342 kB | 336/416 kBProgress (2): 342 kB | 338/416 kBProgress (2): 342 kB | 340/416 kBProgress (2): 342 kB | 341/416 kBProgress (2): 342 kB | 342/416 kBProgress (2): 342 kB | 344/416 kBProgress (2): 342 kB | 346/416 kBProgress (2): 342 kB | 347/416 kBProgress (2): 342 kB | 348/416 kBProgress (2): 342 kB | 349/416 kBProgress (2): 342 kB | 360/416 kBProgress (2): 342 kB | 393/416 kBProgress (2): 342 kB | 404/416 kBProgress (2): 342 kB | 405/416 kBProgress (2): 342 kB | 416 kB                                 Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/springframework/boot/spring-boot-loader-tools/4.1.1/spring-boot-loader-tools-4.1.1.jar (342 kB at 530 kB/s)
+Downloaded from alimaven: http://172.31.4.4:9091/repository/maven-public/org/vafer/jdependency/2.10/jdependency-2.10.jar (416 kB at 569 kB/s)
+[INFO] Replacing main artifact D:\software\ggg\wk-ai-demo\target\wk-ai-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to D:\software\ggg\wk-ai-demo\target\wk-ai-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- failsafe:3.5.6:integration-test (default) @ wk-ai ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.wk.ai.service.RagEvaluationIT
+17:39:31.927 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wk.ai.service.RagEvaluationIT]: RagEvaluationIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:39:32.205 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wk.ai.WkAiApplication for test class com.wk.ai.service.RagEvaluationIT
+17:39:32.373 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.wk.ai.service.RagEvaluationIT]: RagEvaluationIT does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:39:32.375 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.wk.ai.WkAiApplication for test class com.wk.ai.service.RagEvaluationIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-11-03T17:39:33.028+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.service.RagEvaluationIT        : Starting RagEvaluationIT using Java 21.0.11 with PID 32440 (started by wangk in D:\software\ggg\wk-ai-demo)
+2026-11-03T17:39:33.030+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagEvaluationIT        : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-11-03T17:39:33.031+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.service.RagEvaluationIT        : No active profile set, falling back to 1 default profile: "default"
+2026-11-03T17:39:38.058+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformers.ResourceCacheService  : Caching the URL [https://raw.githubusercontent.com/spring-projects/spring-ai/main/models/spring-ai-transformers/src/main/resources/onnx/all-MiniLM-L6-v2/tokenizer.json] resource to: C:\Users\wangk\AppData\Local\Temp\spring-ai-model-cache10688872671666519976\4d42ba07-cb22-352f-bb44-beccc8c8c0b7\tokenizer.json
+2026-11-03T17:39:42.114+08:00  INFO 32440 --- [wk-ai] [           main] ai.djl.util.Platform                     : Found matching platform from: jar:file:/D:/repo/ai/djl/huggingface/tokenizers/0.32.0/tokenizers-0.32.0.jar!/native/lib/tokenizers.properties
+2026-11-03T17:40:05.463+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformers.ResourceCacheService  : Caching the URL [https://media.githubusercontent.com/media/spring-projects/spring-ai/refs/heads/main/models/spring-ai-transformers/src/main/resources/onnx/all-MiniLM-L6-v2/model.onnx] resource to: C:\Users\wangk\AppData\Local\Temp\spring-ai-model-cache10688872671666519976\d5769837-23ea-3f7c-a3e3-ded3412df4f4\model.onnx
+2026-11-03T17:40:05.725+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.t.TransformersEmbeddingModel       : Model input names: input_ids, attention_mask, token_type_ids
+2026-11-03T17:40:05.727+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.t.TransformersEmbeddingModel       : Model output names: last_hidden_state
+2026-11-03T17:40:05.967+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.m.t.a.ToolCallingAutoConfiguration : Cannot load class: org.springframework.security.oauth2.client.ClientAuthorizationException
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.16 
+2026-11-03T17:40:08.092+08:00  INFO 32440 --- [wk-ai] [           main] m.e.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.web.context.support.GenericWebApplicationContext@6438a7fe
+2026-11-03T17:40:08.839+08:00  INFO 32440 --- [wk-ai] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-03T17:40:08.954+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.service.RagEvaluationIT        : Started RagEvaluationIT in 36.458 seconds (process running for 38.913)
+2026-11-03T17:40:10.259+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 2 chunks.
+2026-11-03T17:40:10.371+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 8b14142a48cd16183ae47c9e629c065a9f92f0635b15a8176436d40371c7582f
+2026-11-03T17:40:10.392+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = e37705ab9a65e439776895a365b50507ecf513d9f539e6a71b2a1bbbbfb95dc3
+2026-11-03T17:40:10.656+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 2 chunks.
+2026-11-03T17:40:10.657+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = b075be51a9abe7f79777ab645cdc823e7dab401f11b664ec0549ad6548b2a511
+2026-11-03T17:40:10.674+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 23cf2cdad70271bd7c04dc9b42ff773d131030ba93a2100236d9bb2e5c42a8cd
+2026-11-03T17:40:11.077+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 3 chunks.
+2026-11-03T17:40:11.085+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:11.095+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 5 chunks.
+2026-11-03T17:40:11.103+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:11.104+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 17d2c6cc601d8ec038b3599c6a6666137f6928c4f225752baedcc560493b09aa
+2026-11-03T17:40:11.179+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = cbb9daea65b326c794b9cf75095d0e80b63a8843bfa2304d40b11404f5007119
+2026-11-03T17:40:11.241+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = ba4d4abfe28e02bf36170f423ac4be2e0ee0bac3e3e90b44c9295636a85b6168
+2026-11-03T17:40:11.266+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 1929803aaa26ea65cd393d420c5dafb2f97be3b0334d498ed7a64d10179b60d7
+2026-11-03T17:40:11.327+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 84d6fd9a1fab43422129b9eab614551e194bc3ea165c3f78ed9de12f4dae33a2
+2026-11-03T17:40:11.347+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 9caa4015e84a7a52a504b3583473cbdf24b7c578862c955f7f4429b862a21904
+2026-11-03T17:40:11.364+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 40648d9dc9f7eacff717284c1c9c6687150067a8113958ef1dfed857456bf1f4
+2026-11-03T17:40:11.383+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 2636176d4bf2305b248fa58c66b31a993b6d9f091a0f3470ed67ce2f0514f8a1
+2026-11-03T17:40:11.400+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 7c6590b4196d5d08ec97c85fbcd8f0eb6f4511433f83d11214c36ad719438882
+2026-11-03T17:40:11.406+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 59913e44d9555287d70178cbcf0951c44de8e44753acdf96714771fb9e1e320d
+2026-11-03T17:40:11.423+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 18872a5b36b24b7bceb8fd6140773dd9762afddb1076f9fa309ede6f59e145cc
+2026-11-03T17:40:11.441+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 05c9066f5b004c52f02db24eff9bcb1954e043de31a02a4651e38d550099eeba
+2026-11-03T17:40:11.458+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 88a37a52d82f1959c42063521dda7cfc5e1283205cfe19d988446b9eb9aae1f5
+2026-11-03T17:40:11.667+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 2 chunks.
+2026-11-03T17:40:11.674+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:11.677+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 3 chunks.
+2026-11-03T17:40:11.678+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 04e2e40d26aa55c9e746c9e265cbcb0872687d822afecb3f7b40cbbe1aefc21f
+2026-11-03T17:40:11.695+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = d29199681900006412dc601646ad2e9aafae2f8a8fd53b285dbe7d08b3a2c21b
+2026-11-03T17:40:11.712+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 2e8e3647f9d032821077f29b66ac91c6fb3875688262a072439df840c9885330
+2026-11-03T17:40:11.728+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = ba3ed9fb7c1e951a14f57a2081756b3504e4b5bfe42100ee62e8ffb6d03965a0
+2026-11-03T17:40:11.745+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = bc67989dcc815ee767361238ef1d230a047ec3b80ab2902c097ed5806fb586eb
+2026-11-03T17:40:11.761+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = c501a9b8e925dd7fe8cdf2a67ed92f8dc1cfa8a27921a07f7aa9555ac656209d
+2026-11-03T17:40:11.777+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 4799148b51d322f4095b603d1fa55d40873d5e85c388fc0caf2a446e16e869c9
+2026-11-03T17:40:11.938+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 3 chunks.
+2026-11-03T17:40:11.938+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 642f2fbaa4a2115043e415d34b1a1e8fa2879d7a7febf4e6eee1b66e1bf1088a
+2026-11-03T17:40:11.954+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = c595baebb2fe32f5b76c622ffcf9cb661165a5873e7675933853d12630ef5dd9
+2026-11-03T17:40:11.970+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = dd88f31b6ad6be7cc1b5529a1d0b410fd53934190175be15b33856fbc4a9c4f4
+2026-11-03T17:40:12.165+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.169+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.172+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.174+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.177+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.178+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 3669dca7fb59f30e405e21d500aa16aca11230a748ca43cfd3e872d926fe540c
+2026-11-03T17:40:12.199+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = ca65b87773883201d1f6f29f1bc4b64056a75c7df4c7e5dc49856c0dceff81e8
+2026-11-03T17:40:12.215+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 1b2756d8e7a4166714b717806b5477daf7dd74efba62e2412a0f8fda445ea903
+2026-11-03T17:40:12.230+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = d7cdbcfba533bee98b4c3c23702cf70418f9a9eb837a0760bfece77c64c2827e
+2026-11-03T17:40:12.245+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5ee0b325a2d8d91d6247a9dde6d78f1d3120068eafe4d51e5539f8ee37e3d7fa
+2026-11-03T17:40:12.260+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f222d874cfd168c8670ad47479e64ffffebd985ff50cca568ff54a057abfa386
+2026-11-03T17:40:12.275+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 845e5965f4b63488ba23858c6b9842276b370045d13a2fa463e16592745b5bd0
+2026-11-03T17:40:12.290+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f44f191d7822648f7aba4bdffde3d7ea9ada15f6694d288b180e11770789a1cb
+2026-11-03T17:40:12.305+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 77fd475639302a896dda56e32c7a70bf84cf16b69fd813153e9f6d6335de29cf
+2026-11-03T17:40:12.319+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 2a1ab956b15202c0a71f2a924b41be9e32380f91f952b942d489a98549a9841c
+2026-11-03T17:40:12.333+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 18f35fadf706fe483023c0264598a5a48c7fedccee47903aa24282fce5cff312
+2026-11-03T17:40:12.346+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 36738b72c200433bb59f6a4fb7b1e960d27be21dcbea3e20b3d8500e8acfa421
+2026-11-03T17:40:12.361+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 553aa6b349c11b93036c16e960175943ef1d8f0eb3975ec137b58e109d02099d
+2026-11-03T17:40:12.375+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = b132587745b083400485e16600a53b679fd8c2b84b2fdd459ee5443d3bcbff94
+2026-11-03T17:40:12.389+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f8e705aaf505e98cfda9e28cb0b11e8a2308abf7cd5e94ec3ab2a36ba1e6cfd5
+2026-11-03T17:40:12.425+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = e2a356d407a7d52a9bf78374c139e74436241b2d773f4c278691a8bfd4ad9750
+2026-11-03T17:40:12.716+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 14 chunks.
+2026-11-03T17:40:12.719+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 5 chunks.
+2026-11-03T17:40:12.722+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.723+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.726+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 5 chunks.
+2026-11-03T17:40:12.728+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.729+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.732+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.734+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.735+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.737+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 5 chunks.
+2026-11-03T17:40:12.739+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.741+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.744+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:12.745+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 2 chunks.
+2026-11-03T17:40:12.746+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 3b184fdcb87f38ed35bb71d4761acf8ac99b08b92e2155dec8055098abfc2fb7
+2026-11-03T17:40:12.764+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = d8d38772b1f8332fc75b5930d450ada5c989ffa20dea131ea5ef24638cbfae0b
+2026-11-03T17:40:12.781+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = b5f85cd68cb2f975faa0b2320edee7a0070c229bdca74082a2934cbce849a1f2
+2026-11-03T17:40:12.797+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = b63cac724520dcb07d1ced52455c050ca7cd884edbbb9d0e5995bd8cc51e83f5
+2026-11-03T17:40:12.813+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 6b8ce95d05b7115c7020a2db220c76bdc369c967ca05a677a2b88571af2d90b9
+2026-11-03T17:40:12.818+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = b70e32c5a01609c3855501b4f1fe0c5549ac8d36a729a4a40f305ad48ca8865a
+2026-11-03T17:40:12.834+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 7ad6eee57b5f8d28440805bea80f7831648503f6bab34f08339f5477184d43b6
+2026-11-03T17:40:12.850+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = a9847d70baa7951243e2440cc1aaa15abe577f4a09dd82c804f9d30297802a12
+2026-11-03T17:40:12.866+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 8c3c056a3a159c5ab1383ecdea19ea3e7a3814eb02f118a6425dae6ba36b1d00
+2026-11-03T17:40:12.881+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 33e6d95fa345f70c7f5f0ea53211a7829af949dadda5b7496fece86fbc908dda
+2026-11-03T17:40:12.896+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = d9a230b6e274ff73cbbab501020c40f093658884e6e4c70e27680a940a16d3e1
+2026-11-03T17:40:12.911+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = c89b5cd3c2fc1a10f69eb839223ae32ef7b64b31a4bf8a7fe9b48cc733aef92d
+2026-11-03T17:40:12.926+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 91962898541c30bcea565bda96ab90c50992c9bc8398c9658638125f33efdb2f
+2026-11-03T17:40:12.942+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 49c5d84e2da35744b90eae65cd8e90ce693a45da5b98cb77962d3672c16852de
+2026-11-03T17:40:12.959+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = feb039704e9212443f75ab0fcc39cb760f4bf746ecf9532c2b5e1285e51b4bad
+2026-11-03T17:40:12.974+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = e6f3580aec0b3704ee22a178883e9eaa6e98c9b0c0abb740bf96acf486e2bb44
+2026-11-03T17:40:12.990+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 34ebc50cc6915f79a11bf5cf0880a3799a5f619c7e48c1dc5039606b55d03abf
+2026-11-03T17:40:13.007+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5c1b5d48e7bc8858ed1ffe1f7a41e9ab5106ee34b2f4ef24a98fe49bc9959c5d
+2026-11-03T17:40:13.011+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 96cbed162e91e951abe9b6c930cfe61f4f23ff50e2930b9e228a3199ff635e0d
+2026-11-03T17:40:13.027+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = ceb6f3778843063f99da991ee1d645e58d39c091fe5b7b26cff8ef76816b3de3
+2026-11-03T17:40:13.045+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 8190998c862269ab7f64c453d78ffa8182160494bac48ac591decb84c497f01a
+2026-11-03T17:40:13.062+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5153ca7e82a1dca80a64a37e1b1187a9821255706d90213ae8e6216728498532
+2026-11-03T17:40:13.078+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 0a41a3baa9c700d13d84d26f5feedcbc397ef81cfdb63f02876709824b93c213
+2026-11-03T17:40:13.093+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = af991a8642edf33f9d871023332e4616d8d30e06855fc580dab99e2e9a41b0ca
+2026-11-03T17:40:13.109+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = e0a791a6ff6559873d6f51211950a485c729f3d13be1114ee02ff6b2e28d7b98
+2026-11-03T17:40:13.125+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f2f7f2b9af307bd0afab8148ef72680f92549e0b0ded48bba63000c91f3e0a3e
+2026-11-03T17:40:13.142+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 23075614e54da61ba890fc7ff4e39fd7a5c7f8e14549673e12b4184b69271a77
+2026-11-03T17:40:13.160+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 351794895d30586046be5e318e139c4ec3743668b9b4fc7b13d9e9ab3089c0b6
+2026-11-03T17:40:13.177+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 57aa6fbfa0d2caa5790130d2a3740b86db61ff2b1411287b74e4dfbfa6654e0a
+2026-11-03T17:40:13.192+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 7e5c1ea845c09845006ff651d9ba1b0b511dcaa1c295bde90391aff1f5dbe10d
+2026-11-03T17:40:13.209+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 7104e4b37d96b6ffd4685caa80a47ef0875bdc6e98cb9ae767425b4b5d97e0ab
+2026-11-03T17:40:13.224+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 6e7a3a8f35013a4cb6b17aee97f9776c33ddd7ecc7ba275e3976cc5fac4c4df3
+2026-11-03T17:40:13.239+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 9d0532b7131a510c9b434a961dfa5750472a5a063820d3758d96b2c9f94c5159
+2026-11-03T17:40:13.256+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 53758a69ec67ec57cb3bfba352857a99305b9f7b6739b53782e9cfaf662843c9
+2026-11-03T17:40:13.271+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 830290305ace3c315d80d468099a85d86d6b88f79f118c799fdde0895550baf7
+2026-11-03T17:40:13.288+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 84cfe90532d745f4c3f0d34156a43a695d710832585d2a7ab9eca4c9ddb61828
+2026-11-03T17:40:13.304+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 98a39d68d5529f66d4f8bfb25f51a531e73a1a5d6caa1a4aa052e40cb7d3c532
+2026-11-03T17:40:13.321+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 1f20ff02c7f508e547f7bc69d2ad51956c44ddc2b77e220bca0eb42cb6182c17
+2026-11-03T17:40:13.336+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f4e9be2667ecb9147b13049667fd4ecad70e8385a7cb7560d31d057c700fd311
+2026-11-03T17:40:13.352+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 4053be184946550bc3562704712be930a3ca50d36b37495f19a52a5415cab0cc
+2026-11-03T17:40:13.370+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5ae4818a78a3fa815f56f06475132a63b83a625be4f4a495b9c34c54ef511728
+2026-11-03T17:40:13.387+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = d593818dafefbce7db24249e1a19555bd29f489f07b3e9941a5b8c92764f4f7f
+2026-11-03T17:40:13.405+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = e09e6e6aeb82c370875c1be2946cce24d044a13c2a31472e16f7b0b8624502c0
+2026-11-03T17:40:13.411+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 97ab259bf1e3ee85ed2c98fbfce3d23091bffd5e9e3089ef55aab9dd1190db48
+2026-11-03T17:40:13.429+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 72292a29bfa61c018082e1be30a82affa02ff437b8095d6af3efc67ac8f55883
+2026-11-03T17:40:13.444+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 73f417b808e11f48a2cc3a01e7a3968e9c01c884fc809ab4e12f5f91bf4186fe
+2026-11-03T17:40:13.463+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 467b590e2f0d44b1a02a6f1c29326c925f5228e4181e47dd35dd9c6b3bdf90e9
+2026-11-03T17:40:13.479+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = bc37da936b2a2e2093ad8a4250d2d0a7c61d2d783e487e0b26d03bf7a519cbb2
+2026-11-03T17:40:13.494+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 4d45db4568cb6cb4591d7d01d06b39c53560d24c8d4c74f2a3513359e4d9d02d
+2026-11-03T17:40:13.513+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 84224cdf436eca53209fbf8fa408218895b9153e8b543a1ac1ccb0190152d461
+2026-11-03T17:40:13.529+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5772ca6f8717e6d396515530260b407460c8c910cb568dbf0239aa314fc94fd5
+2026-11-03T17:40:13.544+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 8ed89331a7730ded563bb3fd3a6d01d0055e2fbaff042fb0fc856374a8e1d503
+2026-11-03T17:40:13.558+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f70bd5e8649d5745aa2ab22934e8b5490117bb29287a2e4d5bb97f843998e7a8
+2026-11-03T17:40:13.575+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 56d80a55de870418cd2a34c24974736450ae0a576fd312a2b9086c99bacdad24
+2026-11-03T17:40:13.589+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = df8d09bfe87cf658a82b574d5ced1a6f45525223e6296503d1d130835bd2104d
+2026-11-03T17:40:13.605+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 05f8ce694ff213bd52ffb37a7941e0b9ee3b9f075c38d0f99c15a74545f0b801
+2026-11-03T17:40:13.622+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 049d23c8d33f0ac5f71f6715c063c403d827500afa326dc878f74090461fff1e
+2026-11-03T17:40:13.823+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 3 chunks.
+2026-11-03T17:40:13.824+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:13.827+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:13.829+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 3 chunks.
+2026-11-03T17:40:13.829+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = baae62ed79bf13bd863bf6519e70012d78fc3be3585aa7e4ef22097b9fd53ef4
+2026-11-03T17:40:13.843+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 9e69e64b008979f9160f7d672dc0df1b03134fccfc6edb18bdd717d4c684c906
+2026-11-03T17:40:13.858+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 740cc2aba52a31f6ac3c519ff470da9a64a54ea3888aa84d650de644813875ed
+2026-11-03T17:40:13.873+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 4c3f67b9ad984cd473c7a86f2144e4b7954248661cfa54a31f63c62de1b7d89a
+2026-11-03T17:40:13.888+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = d03b9264e9887a18a1966e62d4a65d216f21e54f678b91374b195063712ac14f
+2026-11-03T17:40:13.904+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = ef594fcfaa7a35ab507d1cb5a7f97237d8214678109986530f5f32b70a42095f
+2026-11-03T17:40:13.918+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5f5f4f23b91290e23d97a25f4bd4ecffec52acd98fcfd65e5a55d26bf52f6c42
+2026-11-03T17:40:13.933+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 63698689488e6e68bfc9a95b7138f28662a5f4678df6eced1f2a6ef2826d22e5
+2026-11-03T17:40:13.948+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = fd551ba42f7ba3fc01be74704fa392b8f31a4cd972c533b32ee6ba228ed39371
+2026-11-03T17:40:13.963+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 3082110bcbc9583396a4be0b9fb1811fd469e4028c7c8d82298d5e72a400ae5e
+2026-11-03T17:40:13.977+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5380bb97662d53b9ea4349c3fb24bd0e46868d9a00b4fa4702b5182d4208d0e3
+2026-11-03T17:40:14.177+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 5 chunks.
+2026-11-03T17:40:14.180+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:14.181+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:14.183+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:14.185+08:00  INFO 32440 --- [wk-ai] [           main] o.s.a.transformer.splitter.TextSplitter  : Splitting up document into 4 chunks.
+2026-11-03T17:40:14.186+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 805be9fc439988b1f264f2d1ca323ea52ab8a1389982b9e76ee08c8203545a79
+2026-11-03T17:40:14.203+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = ef89b62b33163a2cf784d976005ed8e02352fa180bc7c9cbb3b4b448bcb245f9
+2026-11-03T17:40:14.218+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 7545c30dd745dd502bd66c006e888ebf554c3e98b9dd08c4b2a048d31b147426
+2026-11-03T17:40:14.232+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f26596db784bb13579816559b51ec3c709e965b14fed5a878e0ae595c9cd2c0c
+2026-11-03T17:40:14.248+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 607cf38b85a069b12600e344cd6c9dbb9a0288036386bfd3a875d25aa1d7ab88
+2026-11-03T17:40:14.263+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = d94b5524f78757f14349fa6031aaf0743fbf141ec5ddbe878b6500fc4134728b
+2026-11-03T17:40:14.277+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 58097655a4384557bc25c8c89d6de08d7c0d07a94d5f57445d48faef494f836b
+2026-11-03T17:40:14.293+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = fa4f3deb2594318d2c43a9bc3e317b5f5e183268af4d5fcbdb79f07187068edf
+2026-11-03T17:40:14.309+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = e6abc1903ccd62436f6f8e5bf55ae941b34dc036cf8b10d6a278db218ad972ad
+2026-11-03T17:40:14.323+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 23e6431a551b4a61a95af655b89363772592ed834c2a0aebf94aafff924ee370
+2026-11-03T17:40:14.337+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 1dfeeb75c0f34b7f54d0e3641ed55f4281d7266b1677fb535d81206e2597eb54
+2026-11-03T17:40:14.352+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = de91f95480f9fb1afa4ad8b7f475d29d93a9c8c4584b81a0bb018e0ac365e4a4
+2026-11-03T17:40:14.366+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 053e6ec7644edadfdb665ba23b76c33485317a90f650b12f243561b9639b3e70
+2026-11-03T17:40:14.382+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 9bf427b5f917e5bccbb00a95182680715c352814e15f7e349e375d35ef62268d
+2026-11-03T17:40:14.396+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 8c9a230e1de3cabb81a23e8ad5b330c450f2f1ca9706e2aacd3c4a689385447e
+2026-11-03T17:40:14.410+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 4b7b7cfa04fab9287220e54030a545f481cbee31027c219fd205f26ac183addd
+2026-11-03T17:40:14.427+08:00  INFO 32440 --- [wk-ai] [           main] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 750ceac97229bdc73c046d263bf02b2eebafa1e04fd84aac0a4fcf7839da0e40
+2026-11-03T17:40:14.443+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.service.IngestionService       : 知识同步完成: 扫描 9 个文件, 更新 9, 清理 0, 失败 0, 共 128 块
+2026-11-03T17:40:14.444+08:00  INFO 32440 --- [wk-ai] [           main] c.wk.ai.runner.DocumentIngestionRunner   : 启动知识入库完成, 耗时 5362 ms
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (D:\repo\net\bytebuddy\byte-buddy-agent\1.18.11\byte-buddy-agent-1.18.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-03T17:40:15.177+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:40:30.160+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=399, completion=86, total=485
+2026-11-03T17:40:30.162+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:40:30.162+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [RAG 是什么？] -> [RAG 是什么？, RAG（检索增强生成）是什么？其工作原理和应用场景有哪些？, 什么是 RAG 技术？它如何结合信息检索与大语言模型提升回答准确性？, RAG 在人工智能和大模型中的含义是什么？与传统微调方法相比有哪些优势？]
+2026-11-03T17:40:30.194+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 8 块, 取 top 5
+2026-11-03T17:40:30.196+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:40:49.324+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=399, completion=74, total=473
+2026-11-03T17:40:49.325+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:40:49.325+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [RAG 是什么？] -> [RAG 是什么？, RAG 是什么，它的基本原理和工作流程是什么？, 什么是检索增强生成（RAG），它与传统大语言模型有什么区别？, RAG 在人工智能和大模型应用中的作用、优势及典型应用场景有哪些？]
+2026-11-03T17:40:49.346+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 10 块, 取 top 5
+2026-11-03T17:41:02.338+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2006, completion=72, total=2078
+2026-11-03T17:41:02.339+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [RAG 是什么？], 引用 1 个
+2026-11-03T17:41:02.339+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:41:14.930+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=404, completion=73, total=477
+2026-11-03T17:41:14.931+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:41:14.931+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [知识入库有哪几个步骤？] -> [知识入库有哪几个步骤？]
+2026-11-03T17:41:14.936+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:41:23.610+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=404, completion=76, total=480
+2026-11-03T17:41:23.610+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:41:23.610+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [知识入库有哪几个步骤？] -> [知识入库有哪几个步骤？]
+2026-11-03T17:41:43.955+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1098, completion=107, total=1205
+2026-11-03T17:41:43.955+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [知识入库有哪几个步骤？], 引用 1 个
+2026-11-03T17:41:43.955+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:42:00.420+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=406, completion=80, total=486
+2026-11-03T17:42:00.420+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:42:00.421+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [用户提问时系统是怎么找到相关内容的？] -> [用户提问时系统是怎么找到相关内容的？, 用户提问后，系统如何检索并匹配相关信息？, 系统是通过哪些技术从知识库或互联网中找到与用户问题相关的内容的？, 从用户输入问题到返回答案，系统进行相关内容搜索、筛选和排序的流程是什么？]
+2026-11-03T17:42:00.443+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 7 块, 取 top 5
+2026-11-03T17:42:00.444+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:42:12.664+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=406, completion=74, total=480
+2026-11-03T17:42:12.664+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:42:12.664+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [用户提问时系统是怎么找到相关内容的？] -> [用户提问时系统是怎么找到相关内容的？, 用户提问后，系统如何检索并匹配相关信息？, 人工智能系统是通过哪些流程和技术找到与用户问题相关的内容？, 系统如何理解用户问题，并从数据库或知识库中召回相关答案？]
+2026-11-03T17:42:12.684+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 7 块, 取 top 5
+2026-11-03T17:42:46.110+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2058, completion=119, total=2177
+2026-11-03T17:42:46.113+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [用户提问时系统是怎么找到相关内容的？], 引用 1 个
+2026-11-03T17:42:46.113+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:43:09.168+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=75, total=480
+2026-11-03T17:43:09.168+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:43:09.168+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [切分文档的组件是怎么工作的？] -> [切分文档的组件是怎么工作的？]
+2026-11-03T17:43:09.174+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:43:34.032+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=104, total=509
+2026-11-03T17:43:34.032+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:43:34.032+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [切分文档的组件是怎么工作的？] -> [切分文档的组件是怎么工作的？]
+2026-11-03T17:44:13.748+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1560, completion=200, total=1760
+2026-11-03T17:44:13.748+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [切分文档的组件是怎么工作的？], 引用 2 个
+2026-11-03T17:44:13.749+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:44:23.402+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=406, completion=88, total=494
+2026-11-03T17:44:23.402+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:44:23.403+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [把长文本变成短块的依据是什么？] -> [把长文本变成短块的依据是什么？]
+2026-11-03T17:44:23.412+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:44:46.967+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=406, completion=85, total=491
+2026-11-03T17:44:46.967+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:44:46.967+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [把长文本变成短块的依据是什么？] -> [把长文本变成短块的依据是什么？, 长文本切分成短文本块的依据和原则有哪些？, 文本分块通常根据哪些因素确定块大小与边界？, 如何判断长文本应按语义、段落还是固定长度切分？]
+2026-11-03T17:44:46.988+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 11 块, 取 top 5
+2026-11-03T17:45:06.684+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2031, completion=40, total=2071
+2026-11-03T17:45:06.684+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [把长文本变成短块的依据是什么？], 引用 1 个
+2026-11-03T17:45:06.684+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:45:30.654+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=408, completion=88, total=496
+2026-11-03T17:45:30.654+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:45:30.654+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [为什么不建议在查询的时候才做向量化入库？] -> [为什么不建议在查询的时候才做向量化入库？]
+2026-11-03T17:45:30.659+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:45:45.510+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=408, completion=97, total=505
+2026-11-03T17:45:45.511+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:45:45.511+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [为什么不建议在查询的时候才做向量化入库？] -> [为什么不建议在查询的时候才做向量化入库？]
+2026-11-03T17:46:04.370+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1104, completion=233, total=1337
+2026-11-03T17:46:04.371+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [为什么不建议在查询的时候才做向量化入库？], 引用 1 个
+2026-11-03T17:46:04.371+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:46:23.651+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=85, total=492
+2026-11-03T17:46:23.652+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:46:23.652+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [检索增强生成的查询流程包括哪些环节？] -> [检索增强生成的查询流程包括哪些环节？, 检索增强生成（RAG）的完整查询流程包含哪些主要步骤和关键环节？, RAG系统从用户提问到生成最终答案通常经历哪些流程？, 检索增强生成中的查询处理、文档检索、上下文构建与答案生成分别包括哪些环节？]
+2026-11-03T17:46:23.673+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 12 块, 取 top 5
+2026-11-03T17:46:23.674+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:46:53.454+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=92, total=499
+2026-11-03T17:46:53.454+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:46:53.454+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [检索增强生成的查询流程包括哪些环节？] -> [检索增强生成的查询流程包括哪些环节？]
+2026-11-03T17:47:31.333+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2082, completion=231, total=2313
+2026-11-03T17:47:31.333+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [检索增强生成的查询流程包括哪些环节？], 引用 2 个
+2026-11-03T17:47:31.333+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:48:10.836+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=76, total=481
+2026-11-03T17:48:10.836+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:48:10.836+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [文本块是怎么变成向量的？] -> [文本块是怎么变成向量的？]
+2026-11-03T17:48:10.841+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:49:00.990+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=106, total=511
+2026-11-03T17:49:00.990+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:49:00.990+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [文本块是怎么变成向量的？] -> [文本块是怎么变成向量的？]
+2026-11-03T17:49:13.943+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2080, completion=51, total=2131
+2026-11-03T17:49:13.944+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [文本块是怎么变成向量的？], 引用 1 个
+2026-11-03T17:49:13.944+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:49:28.754+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=127, total=534
+2026-11-03T17:49:28.754+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:49:28.754+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [大模型胡说八道的问题 RAG 怎么缓解？] -> [大模型胡说八道的问题 RAG 怎么缓解？]
+2026-11-03T17:49:28.760+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:49:42.913+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=113, total=520
+2026-11-03T17:49:42.913+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:49:42.913+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [大模型胡说八道的问题 RAG 怎么缓解？] -> [大模型胡说八道的问题 RAG 怎么缓解？]
+2026-11-03T17:49:55.246+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2057, completion=44, total=2101
+2026-11-03T17:49:55.246+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [大模型胡说八道的问题 RAG 怎么缓解？], 引用 1 个
+2026-11-03T17:49:55.246+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:50:05.077+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=109, total=514
+2026-11-03T17:50:05.078+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:50:05.078+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [父子检索解决什么矛盾？] -> [父子检索解决什么矛盾？, 父子检索主要解决了哪些信息检索中的矛盾？, 什么是父子检索，它针对的核心问题和应用场景是什么？, 父子检索如何平衡检索结果的准确性、完整性与层级关系？]
+2026-11-03T17:50:05.097+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 9 块, 取 top 5
+2026-11-03T17:50:05.097+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:50:16.541+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=126, total=531
+2026-11-03T17:50:16.541+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:50:16.541+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [父子检索解决什么矛盾？] -> [父子检索解决什么矛盾？]
+2026-11-03T17:50:36.794+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2032, completion=120, total=2152
+2026-11-03T17:50:36.795+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [父子检索解决什么矛盾？], 引用 1 个
+2026-11-03T17:50:36.795+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:50:51.981+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=89, total=496
+2026-11-03T17:50:51.981+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:50:51.981+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [父块和子块的 token 上限分别是多少？] -> [父块和子块的 token 上限分别是多少？, 父块和子块分别支持的最大 token 数是多少？, 父块与子块的 token 限制上限各是多少？, 在分块设置中，父块和子块的最大 token 长度分别是多少？]
+2026-11-03T17:50:51.999+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 9 块, 取 top 5
+2026-11-03T17:50:51.999+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:51:11.970+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=93, total=500
+2026-11-03T17:51:11.971+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:51:11.971+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [父块和子块的 token 上限分别是多少？] -> [父块和子块的 token 上限分别是多少？]
+2026-11-03T17:51:27.357+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2382, completion=71, total=2453
+2026-11-03T17:51:27.357+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [父块和子块的 token 上限分别是多少？], 引用 1 个
+2026-11-03T17:51:27.357+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:51:43.829+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=410, completion=82, total=492
+2026-11-03T17:51:43.830+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:51:43.830+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [检索命中小块之后怎么拿到完整的上下文？] -> [检索命中小块之后怎么拿到完整的上下文？]
+2026-11-03T17:51:43.835+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:52:04.758+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=410, completion=99, total=509
+2026-11-03T17:52:04.759+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:52:04.759+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [检索命中小块之后怎么拿到完整的上下文？] -> [检索命中小块之后怎么拿到完整的上下文？]
+2026-11-03T17:52:41.692+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2071, completion=112, total=2183
+2026-11-03T17:52:41.692+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [检索命中小块之后怎么拿到完整的上下文？], 引用 1 个
+2026-11-03T17:52:41.692+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:53:00.572+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=107, total=514
+2026-11-03T17:53:00.572+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:53:00.572+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [怎么关闭父子切块退化为平铺模式？] -> [怎么关闭父子切块退化为平铺模式？, 如何关闭父子切块功能，避免自动退化为平铺切块模式？, 父子分块为什么会退化成平铺模式，应该在哪里配置关闭或修复？, 父子 Chunking 退化为扁平切块模式的开关、配置项及解决方法是什么？]
+2026-11-03T17:53:00.593+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 10 块, 取 top 5
+2026-11-03T17:53:00.593+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:53:22.460+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=114, total=521
+2026-11-03T17:53:22.460+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:53:22.460+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [怎么关闭父子切块退化为平铺模式？] -> [怎么关闭父子切块退化为平铺模式？]
+2026-11-03T17:53:33.464+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1566, completion=32, total=1598
+2026-11-03T17:53:33.464+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [怎么关闭父子切块退化为平铺模式？], 引用 1 个
+2026-11-03T17:53:33.464+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:53:44.562+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=402, completion=95, total=497
+2026-11-03T17:53:44.562+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T17:53:44.562+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [意图路由的分类有哪些？] -> [意图路由的分类有哪些？, 意图路由通常分为哪些类型？各类意图路由的定义与应用场景是什么？, 意图识别与路由有哪些常见分类方法？请介绍不同意图路由类型及其特点。, 在智能客服或对话系统中，意图路由可以分为哪几类？如何区分和选择？]
+2026-11-03T17:53:44.599+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 10 块, 取 top 5
+2026-11-03T17:53:44.599+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:54:07.072+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=402, completion=77, total=479
+2026-11-03T17:54:07.072+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:54:07.072+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [意图路由的分类有哪些？] -> [意图路由的分类有哪些？]
+2026-11-03T17:54:19.130+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1098, completion=62, total=1160
+2026-11-03T17:54:19.131+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [意图路由的分类有哪些？], 引用 3 个
+2026-11-03T17:54:19.131+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:54:44.291+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=408, completion=81, total=489
+2026-11-03T17:54:44.292+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:54:44.292+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [为什么不能用大模型自由决定查数据库还是查知识库？] -> [为什么不能用大模型自由决定查数据库还是查知识库？]
+2026-11-03T17:54:44.297+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:54:58.271+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=408, completion=81, total=489
+2026-11-03T17:54:58.271+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:54:58.271+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [为什么不能用大模型自由决定查数据库还是查知识库？] -> [为什么不能用大模型自由决定查数据库还是查知识库？]
+2026-11-03T17:55:12.687+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1605, completion=194, total=1799
+2026-11-03T17:55:12.688+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [为什么不能用大模型自由决定查数据库还是查知识库？], 引用 1 个
+2026-11-03T17:55:12.688+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:55:26.534+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=404, completion=74, total=478
+2026-11-03T17:55:26.534+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:55:26.536+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [ERP 工具的数据库账号有什么权限限制？] -> [ERP 工具的数据库账号有什么权限限制？]
+2026-11-03T17:55:26.540+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:56:13.719+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=404, completion=74, total=478
+2026-11-03T17:56:13.719+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:56:13.719+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [ERP 工具的数据库账号有什么权限限制？] -> [ERP 工具的数据库账号有什么权限限制？]
+2026-11-03T17:56:47.851+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1588, completion=65, total=1653
+2026-11-03T17:56:47.852+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [ERP 工具的数据库账号有什么权限限制？], 引用 3 个
+2026-11-03T17:56:47.852+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:57:12.802+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=108, total=515
+2026-11-03T17:57:12.802+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:57:12.804+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [流式输出为什么选 SSE 而不是 WebSocket？] -> [流式输出为什么选 SSE 而不是 WebSocket？]
+2026-11-03T17:57:12.809+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:58:08.820+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=407, completion=112, total=519
+2026-11-03T17:58:08.820+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:58:08.820+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [流式输出为什么选 SSE 而不是 WebSocket？] -> [流式输出为什么选 SSE 而不是 WebSocket？]
+2026-11-03T17:58:17.250+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2257, completion=150, total=2407
+2026-11-03T17:58:17.250+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [流式输出为什么选 SSE 而不是 WebSocket？], 引用 1 个
+2026-11-03T17:58:17.250+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:58:32.084+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=412, completion=105, total=517
+2026-11-03T17:58:32.084+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:58:32.084+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [Nginx 代理会导致打字机效果失效吗？怎么解决？] -> [Nginx 代理会导致打字机效果失效吗？怎么解决？]
+2026-11-03T17:58:32.090+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:58:46.721+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=412, completion=107, total=519
+2026-11-03T17:58:46.721+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:58:46.721+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [Nginx 代理会导致打字机效果失效吗？怎么解决？] -> [Nginx 代理会导致打字机效果失效吗？怎么解决？]
+2026-11-03T17:59:09.836+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1880, completion=161, total=2041
+2026-11-03T17:59:09.837+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [Nginx 代理会导致打字机效果失效吗？怎么解决？], 引用 2 个
+2026-11-03T17:59:09.837+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:59:37.653+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=399, completion=67, total=466
+2026-11-03T17:59:37.653+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:59:37.653+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [VPN 连不上怎么办？] -> [VPN 连不上怎么办？]
+2026-11-03T17:59:37.713+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T17:59:59.246+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=399, completion=76, total=475
+2026-11-03T17:59:59.246+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T17:59:59.246+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [VPN 连不上怎么办？] -> [VPN 连不上怎么办？]
+2026-11-03T18:00:18.391+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1453, completion=169, total=1622
+2026-11-03T18:00:18.391+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [VPN 连不上怎么办？], 引用 1 个
+2026-11-03T18:00:18.392+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:00:40.442+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=74, total=479
+2026-11-03T18:00:40.443+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T18:00:40.443+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [VPN 动态口令失效了怎么处理？] -> [VPN 动态口令失效了怎么处理？]
+2026-11-03T18:00:40.448+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:00:55.040+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=85, total=490
+2026-11-03T18:00:55.040+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T18:00:55.040+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [VPN 动态口令失效了怎么处理？] -> [VPN 动态口令失效了怎么处理？]
+2026-11-03T18:01:09.462+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1947, completion=33, total=1980
+2026-11-03T18:01:09.462+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [VPN 动态口令失效了怎么处理？], 引用 1 个
+2026-11-03T18:01:09.462+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:01:24.006+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=402, completion=74, total=476
+2026-11-03T18:01:24.006+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:01:24.006+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [调休的有效期是多久？] -> [调休的有效期是多久？, 调休假可以在多长时间内使用，是否有有效期限制？, 调休未使用会保留多久，跨年度后还能继续使用吗？, 劳动法对调休有效期如何规定，公司能否设定调休过期时间？]
+2026-11-03T18:01:24.026+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 11 块, 取 top 5
+2026-11-03T18:01:24.027+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:01:38.190+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=402, completion=76, total=478
+2026-11-03T18:01:38.190+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:01:38.190+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [调休的有效期是多久？] -> [调休的有效期是多久？, 调休假一般可以保留多长时间？, 公司调休的有效期通常是多久，是否有法律规定？, 未使用的调休假何时失效，离职时能否折算或补偿？]
+2026-11-03T18:01:38.210+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 9 块, 取 top 5
+2026-11-03T18:01:58.420+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1546, completion=16, total=1562
+2026-11-03T18:01:58.421+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [调休的有效期是多久？], 引用 1 个
+2026-11-03T18:01:58.421+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:02:11.342+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=400, completion=56, total=456
+2026-11-03T18:02:11.342+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:02:11.342+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [公司年会是什么时候？] -> [公司年会是什么时候？, 公司今年的年会定于什么时候举行？, 公司年度聚会的具体时间是什么？, 请问公司年会的日期和时间安排是怎样的？]
+2026-11-03T18:02:11.359+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 8 块, 取 top 5
+2026-11-03T18:02:11.359+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:02:56.037+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=400, completion=51, total=451
+2026-11-03T18:02:56.038+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:02:56.038+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [公司年会是什么时候？] -> [公司年会是什么时候？, 公司年度聚会通常安排在什么时候？, 企业年会一般会在几月份举行？, 今年公司年会的具体日期是什么时候？]
+2026-11-03T18:02:56.054+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 12 块, 取 top 5
+2026-11-03T18:03:21.906+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1578, completion=13, total=1591
+2026-11-03T18:03:21.906+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [公司年会是什么时候？], 引用 3 个
+2026-11-03T18:03:21.906+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:03:52.415+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=402, completion=51, total=453
+2026-11-03T18:03:52.415+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:03:52.415+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [食堂今天中午有什么菜？] -> [食堂今天中午有什么菜？, 今天食堂午餐供应哪些菜？, 中午食堂的菜单是什么？, 请问食堂今天午饭有哪些菜品？]
+2026-11-03T18:03:52.431+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 8 块, 取 top 5
+2026-11-03T18:03:52.431+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:04:04.047+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=402, completion=47, total=449
+2026-11-03T18:04:04.047+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:04:04.047+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [食堂今天中午有什么菜？] -> [食堂今天中午有什么菜？, 今天中午食堂提供哪些菜？, 食堂午餐菜单是什么？, 请问食堂今天午饭有哪些菜品？]
+2026-11-03T18:04:04.061+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 8 块, 取 top 5
+2026-11-03T18:04:44.024+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1566, completion=15, total=1581
+2026-11-03T18:04:44.025+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [食堂今天中午有什么菜？], 引用 3 个
+2026-11-03T18:04:44.025+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:05:03.928+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=402, completion=87, total=489
+2026-11-03T18:05:03.929+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T18:05:03.929+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [Goku 的战斗力是多少？] -> [Goku 的战斗力是多少？]
+2026-11-03T18:05:03.933+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:05:37.497+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=402, completion=89, total=491
+2026-11-03T18:05:37.497+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:05:37.497+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [Goku 的战斗力是多少？] -> [Goku 的战斗力是多少？, 孙悟空在《龙珠》不同阶段的战斗力分别是多少？, 《龙珠》中Goku的战斗力数值及成长历程是怎样的？, Goku在赛亚人篇、弗利萨篇、沙鲁篇和魔人布欧篇的战斗力对比是多少？]
+2026-11-03T18:05:37.515+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 10 块, 取 top 5
+2026-11-03T18:06:00.499+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1559, completion=84, total=1643
+2026-11-03T18:06:00.499+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [Goku 的战斗力是多少？], 引用 3 个
+2026-11-03T18:06:00.499+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:06:15.648+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=400, completion=52, total=452
+2026-11-03T18:06:15.649+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:06:15.649+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [公司规定退休年龄是多少？] -> [公司规定退休年龄是多少？, 中国法定退休年龄是多少岁？, 企业员工退休年龄有哪些规定？, 不同职业和性别的退休年龄政策是什么？]
+2026-11-03T18:06:15.666+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 12 块, 取 top 5
+2026-11-03T18:06:15.666+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:06:29.148+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=400, completion=68, total=468
+2026-11-03T18:06:29.148+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T18:06:29.148+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [公司规定退休年龄是多少？] -> [公司规定退休年龄是多少？]
+2026-11-03T18:07:16.263+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1890, completion=53, total=1943
+2026-11-03T18:07:16.263+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [公司规定退休年龄是多少？], 引用 3 个
+2026-11-03T18:07:16.263+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:07:30.423+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=404, completion=88, total=492
+2026-11-03T18:07:30.423+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T18:07:30.423+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [项目为什么选择 SSE 做流式输出？] -> [项目为什么选择 SSE 做流式输出？]
+2026-11-03T18:07:30.427+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:07:43.435+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=404, completion=102, total=506
+2026-11-03T18:07:43.436+08:00  WARN 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Query expansion result does not contain the requested 3 variants. Returning the input query unchanged.
+2026-11-03T18:07:43.436+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [项目为什么选择 SSE 做流式输出？] -> [项目为什么选择 SSE 做流式输出？]
+2026-11-03T18:07:56.911+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=2002, completion=122, total=2124
+2026-11-03T18:07:56.911+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [项目为什么选择 SSE 做流式输出？], 引用 1 个
+2026-11-03T18:07:56.911+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:08:33.368+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=97, total=502
+2026-11-03T18:08:33.368+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:08:33.368+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [webflux 依赖在项目里有哪些用途？] -> [webflux 依赖在项目里有哪些用途？, Spring WebFlux 依赖在项目中的主要作用和应用场景有哪些？, WebFlux 相关依赖通常用于实现哪些功能，例如响应式编程、异步非阻塞请求和高并发处理？, 项目引入 Spring WebFlux 依赖后可以解决什么问题，与 Spring MVC 相比有哪些用途和优势？]
+2026-11-03T18:08:33.389+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 14 块, 取 top 5
+2026-11-03T18:08:33.389+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Generating 3 query variants
+2026-11-03T18:09:09.639+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=405, completion=89, total=494
+2026-11-03T18:09:09.639+08:00 DEBUG 32440 --- [wk-ai] [           main] o.s.a.r.p.q.e.MultiQueryExpander         : Including the original query in the result
+2026-11-03T18:09:09.639+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 查询扩展: [webflux 依赖在项目里有哪些用途？] -> [webflux 依赖在项目里有哪些用途？, Spring WebFlux 依赖在项目中的作用、应用场景和核心功能有哪些？, WebFlux 依赖通常用于解决哪些问题？与 Spring MVC 相比有什么优势和适用场景？, 项目引入 spring-boot-starter-webflux 后会带来哪些功能、组件和使用方式？]
+2026-11-03T18:09:09.659+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : 多路检索融合: 4 路查询, 命中去重后 12 块, 取 top 5
+2026-11-03T18:09:24.718+08:00  INFO 32440 --- [wk-ai] [           main] com.wk.ai.advisor.TokenUsageAdvisor      : LLM token 用量: prompt=1916, completion=127, total=2043
+2026-11-03T18:09:24.718+08:00 DEBUG 32440 --- [wk-ai] [           main] com.wk.ai.service.RagChatService         : RAG 问答完成: 检索问题 [webflux 依赖在项目里有哪些用途？], 引用 1 个
+评测报告: D:\software\ggg\wk-ai-demo\target\rag-eval-report.md Recall@K=0.630 MRR=0.488 tokens=77225
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1793 s -- in com.wk.ai.service.RagEvaluationIT
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- failsafe:3.5.6:verify (default) @ wk-ai ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31:19 min
+[INFO] Finished at: 2026-11-03T18:09:24+08:00
+[INFO] ------------------------------------------------------------------------
